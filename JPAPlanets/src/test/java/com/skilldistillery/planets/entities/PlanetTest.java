@@ -42,10 +42,13 @@ class PlanetTest {
 
 
 	@Test
-	void test_planet_mapping() {
+	void test_planet_entity_mapping() {
 		
 		assertNotNull(planet);
 		assertEquals("Mercury", planet.getName());
+		assertEquals("Grey", planet.getColor());
+		assertEquals("The smallest planet in our solar system.", planet.getDescription());
+		assertEquals(57909227, planet.getOrbitDistanceKilometers());
 		
 	
 	}

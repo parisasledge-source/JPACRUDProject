@@ -16,7 +16,7 @@ public class PlanetController {
 	@RequestMapping(path= {"/", "home.do"})
 	public String home(Model model) {
 		model.addAttribute("DEBUG", dao.findById(1));
-		return null;
+		return "home";
 	}
 
 }
