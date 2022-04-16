@@ -47,7 +47,12 @@ class PlanetTest {
 		assertNotNull(planet);
 		assertEquals("Mercury", planet.getName());
 		assertEquals("Grey", planet.getColor());
-		assertEquals("The smallest planet in our solar system.", planet.getDescription());
+		assertEquals("The smallest planet in our solar system, Mercury is only slightly larger than Earth's Moon. "
+				+ "It is the closest planet to the Sun, but it’s actually not the hottest. Venus is hotter.\n"
+				+ "Along with Venus, Earth, and Mars, Mercury is one of the rocky planets. "
+				+ "It has a solid surface that is covered with craters like our Moon. It has a thin atmosphere, "
+				+ "and it doesn’t have any moons. Mercury spins slowly compared to Earth, so one day lasts a long time. "
+				+ "But a year on Mercury goes fast. Because it’s the closest planet to the sun.", planet.getDescription());
 		assertEquals(57909227, planet.getOrbitDistanceKilometers());
 		
 	
