@@ -41,14 +41,19 @@ public class PlanetDaoJpaImpl implements PlanetDAO {
 		return p;
 	}
 	
-//	@Override
-//	public Planet updatePlanet(int planetId) {
-//		
-//		Planet p = em.find(Planet.class, planetId);
-//		p.setName(p.getName());
-//		
-//		return p;
-//	}
+	@Override
+	public Planet updatePlanet(int planetId, Planet planet) {
+		
+		Planet updatePlanet = em.find(Planet.class, planetId);
+		
+		updatePlanet.setName(planet.getName());
+		updatePlanet.setColor(planet.getColor());
+		//updatePlanet.setDescription(planet.getDescription());
+		
+		em.persist(planet);
+		em.flush();
+		return updatePlanet;
+	}
 	
 
 	

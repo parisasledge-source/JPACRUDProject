@@ -11,6 +11,9 @@ public interface PlanetDAO {
 	
 	Planet addNewPlanet(String name, String color);
 
+	Planet updatePlanet(int i, Planet planet);
+
+
 	//Planet updatePlanet(int planetId);
 
 	//Planet deletePlanet(String name, String color);

@@ -21,6 +21,16 @@
 			Planet Color: <input type="text" name="color"  /> 
 			<input type="submit" value="Add Planet" />
 		</form>
+		
+		</form>
+		
+		<form action="updatePlanet.do" method="POST">
+			Planet Name: <input type="text" name="name" /> 
+			Planet Color: <input type="text" name="color" /> 
+			<input type="submit" value="Update Planet" />
+		</form>
+		
+		
 		<table class="table table-striped">
 			<thead class="table-dark">
 				<tr>

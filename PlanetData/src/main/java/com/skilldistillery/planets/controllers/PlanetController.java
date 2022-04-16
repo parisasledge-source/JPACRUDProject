@@ -45,11 +45,11 @@ public class PlanetController {
 		return "display";
 	}
 
-//	@RequestMapping(path = "updatePlanet.do", method = RequestMethod.POST)
-//	public String updatePlanet(int id, Model model) {
-//		Planet newPlanet = dao.updatePlanet(id);
-//		model.addAttribute("planet", newPlanet);
-//		return "display";
+	@RequestMapping(path = "updatePlanet.do",method = RequestMethod.POST)
+	public String updatePlanet(Planet planet, Model model) {
+		Planet newPlanet = dao.updatePlanet(9, planet);
+		model.addAttribute("planet", newPlanet);
+		return "display";
 	}
 
 	/*
@@ -70,4 +70,4 @@ public class PlanetController {
 //		return "display";
 //	}
 
-
+}
