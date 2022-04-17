@@ -9,5 +9,5 @@ public class PlanetDataApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PlanetDataApplication.class, args);
 	}
-
+	
 }

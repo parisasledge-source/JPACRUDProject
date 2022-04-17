@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class PlanetTest {
@@ -42,8 +43,10 @@ class PlanetTest {
 
 
 	@Test
+	@DisplayName("testing basic Planet mapping")
 	void test_planet_entity_mapping() {
 		
+	
 		assertNotNull(planet);
 		assertEquals("Mercury", planet.getName());
 		assertEquals("Grey", planet.getColor());
@@ -54,6 +57,10 @@ class PlanetTest {
 				+ "and it doesn’t have any moons. Mercury spins slowly compared to Earth, so one day lasts a long time. "
 				+ "But a year on Mercury goes fast. Because it’s the closest planet to the sun.", planet.getDescription());
 		assertEquals(57909227, planet.getOrbitDistanceKilometers());
+		assertEquals(167, planet.getTempCelsius());
+		assertEquals(2439.7, planet.getRadiusKilometers());
+		assertEquals("330104 Quintillion", planet.getMass());
+		assertEquals(3.7, planet.getGravity());
 		
 	
 	}
