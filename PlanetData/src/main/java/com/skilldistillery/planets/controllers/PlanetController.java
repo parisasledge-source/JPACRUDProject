@@ -51,23 +51,11 @@ public class PlanetController {
 		model.addAttribute("planet", newPlanet);
 		return "display";
 	}
-
-	/*
-	 * @RequestMapping(path = "updatefilm.do", method = RequestMethod.POST) public
-	 * ModelAndView updatefilm( Film film, @RequestParam("filmId") String filmId) {
-	 * // public ModelAndView updatefilm( Film film, @RequestParam("filmId")) {
-	 * ModelAndView mv = new ModelAndView(); Film newFilm = filmDao.updateFilm(film,
-	 * Integer.parseInt(filmId)); mv.addObject("film", newFilm);
-	 * mv.setViewName("WEB-INF/film-updated.jsp"); return mv;
-	 * 
-	 * }
-	 */
-
-//	@RequestMapping(path="deletePlanet.do")
-//	public String deletePlanet(String name, String color, Model model) {
-//		Planet planet = dao.deletePlanet(name, color);
-//		model.addAttribute("planet", planet);
-//		return "display";
-//	}
+	
+	@RequestMapping(path="deletePlanet.do", params = "planetId", method = RequestMethod.POST)
+	public String deletePlanet(int planetId) {
+		dao.deletePlanet(planetId);
+		return "display";
+	}
 
 }

@@ -30,6 +30,12 @@
 			<input type="submit" value="Update Planet" />
 		</form>
 		
+		<form action="deletePlanet.do" method="POST">
+			Planet ID: <input type="text" name="planetId" /> 
+			<!-- Planet Color: <input type="text" name="color" />  --> 
+			<input type="submit" value="Delete Planet" />
+		</form>
+		
 		
 		<table class="table table-striped">
 			<thead class="table-dark">

@@ -13,8 +13,6 @@ public interface PlanetDAO {
 
 	Planet updatePlanet(int i, Planet planet);
 
+	boolean deletePlanet(int planetId);
 
-	//Planet updatePlanet(int planetId);
-
-	//Planet deletePlanet(String name, String color);
 }

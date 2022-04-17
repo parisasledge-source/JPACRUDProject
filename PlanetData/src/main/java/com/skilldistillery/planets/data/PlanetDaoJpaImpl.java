@@ -1,6 +1,5 @@
 package com.skilldistillery.planets.data;
 
-import java.sql.PreparedStatement;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,8 +7,6 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
-
-import com.mysql.cj.xdevapi.Statement;
 import com.skilldistillery.planets.entities.Planet;
 
 @Service
@@ -55,19 +52,18 @@ public class PlanetDaoJpaImpl implements PlanetDAO {
 		return updatePlanet;
 	}
 	
-
-	
-	
-//	public boolean deletePlanet(int planetId) {
-//		boolean isDeleted = false;
-//		Planet planet = em.find(Planet.class, planetId);
-//		if(planet != null) {
-//			em.remove(planet);
-//		}
-//		isDeleted = !em.contains(planet);
-//		
-//		return isDeleted;
-//	}
+	@Override
+	public boolean deletePlanet(int planetId) {
+		boolean isDeleted = false;
+		
+		Planet planet = em.find(Planet.class, planetId);
+		if(planet != null) {
+			em.remove(planet);
+			em.flush();
+			isDeleted = !em.contains(planet);
+		}
+		return isDeleted;
+	}
 
 
 
