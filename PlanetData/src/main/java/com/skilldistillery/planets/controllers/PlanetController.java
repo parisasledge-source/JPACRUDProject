@@ -45,15 +45,14 @@ public class PlanetController {
 		return "planetdemo/display";
 	}
 
-	@RequestMapping(path = "updatePlanet.do", method = RequestMethod.POST)
+	@RequestMapping(path = "updatePlanet.do",method = RequestMethod.POST)
 	public String updatePlanet(Planet planet, Model model) {
-		// Planet newPlanet =
-		dao.updatePlanet(9, planet);
-		// model.addAttribute("planet", newPlanet);
+		Planet newPlanet = dao.updatePlanet(9, planet);
+		model.addAttribute("planet", newPlanet);
 		return "planetdemo/display";
 	}
-
-	@RequestMapping(path = "deletePlanet.do", params = "planetId", method = RequestMethod.POST)
+	
+	@RequestMapping(path="deletePlanet.do", params = "planetId", method = RequestMethod.POST)
 	public String deletePlanet(int planetId) {
 		dao.deletePlanet(planetId);
 		return "planetdemo/display";

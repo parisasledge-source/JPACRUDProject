@@ -8,7 +8,7 @@ public interface PlanetDAO {
 	Planet findById(int planetId);
 
 	List<Planet> findAll();
-
+	
 	Planet addNewPlanet(String name, String color);
 
 	Planet updatePlanet(int i, Planet planet);
