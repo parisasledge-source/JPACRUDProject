@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Planets</title>
+<%-- <jsp:include page="bootstraphead.jsp"/> --%>
 </head>
 <body>
 	<main class="container-fluid">
@@ -15,32 +16,33 @@
 			Planet ID: <input type="text" name="id" /> <input type="submit"
 				value="Display Planet" />
 		</form>
-		
+
 		<form action="addPlanet.do" method="GET">
-			Planet Name: <input type="text" name="name"  /> 
-			Planet Color: <input type="text" name="color"  /> 
-			<input type="submit" value="Add Planet" />
+			Planet Name: <input type="text" name="name" /> Planet Color: <input
+				type="text" name="color" /> <input type="submit"
+				value="Add Planet" />
 		</form>
-		
+
 		</form>
-		
+
 		<form action="updatePlanet.do" method="POST">
-			Planet Name: <input type="text" name="name" /> 
-			Planet Color: <input type="text" name="color" /> 
-			<input type="submit" value="Update Planet" />
+			Planet Name: <input type="text" name="name" /> Planet Color: <input
+				type="text" name="color" /> <input type="submit"
+				value="Update Planet" />
 		</form>
-		
+
 		<form action="deletePlanet.do" method="POST">
-			Planet ID: <input type="text" name="planetId" /> 
-			<!-- Planet Color: <input type="text" name="color" />  --> 
+			Planet ID: <input type="text" name="planetId" />
+			<!-- Planet Color: <input type="text" name="color" />  -->
 			<input type="submit" value="Delete Planet" />
 		</form>
-		
-		
+
+
 		<table class="table table-striped">
 			<thead class="table-dark">
 				<tr>
-					<th>ID</th><th>Title</th>	
+					<th>ID</th>
+					<th>Title</th>
 				</tr>
 			</thead>
 			<tbody>

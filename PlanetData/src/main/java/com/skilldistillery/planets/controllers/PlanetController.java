@@ -35,27 +35,28 @@ public class PlanetController {
 	public String displayPlanet(Integer id, Model model) {
 		Planet planet = dao.findById(id);
 		model.addAttribute("planet", planet);
-		return "display";
+		return "planetdemo/display";
 	}
 
 	@RequestMapping(path = "addPlanet.do")
 	public String addNewPlanet(String name, String color, Model model) {
 		Planet planet = dao.addNewPlanet(name, color);
 		model.addAttribute("planet", planet);
-		return "display";
+		return "planetdemo/display";
 	}
 
-	@RequestMapping(path = "updatePlanet.do",method = RequestMethod.POST)
+	@RequestMapping(path = "updatePlanet.do", method = RequestMethod.POST)
 	public String updatePlanet(Planet planet, Model model) {
-		Planet newPlanet = dao.updatePlanet(9, planet);
-		model.addAttribute("planet", newPlanet);
-		return "display";
+		// Planet newPlanet =
+		dao.updatePlanet(9, planet);
+		// model.addAttribute("planet", newPlanet);
+		return "planetdemo/display";
 	}
-	
-	@RequestMapping(path="deletePlanet.do", params = "planetId", method = RequestMethod.POST)
+
+	@RequestMapping(path = "deletePlanet.do", params = "planetId", method = RequestMethod.POST)
 	public String deletePlanet(int planetId) {
 		dao.deletePlanet(planetId);
-		return "display";
+		return "planetdemo/display";
 	}
 
 }

@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Planet Data</title>
-<jsp:include page="bootstraphead.jsp" />
+<jsp:include page="../bootstraphead.jsp" />
 </head>
 <body>
 

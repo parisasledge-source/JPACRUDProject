@@ -12,13 +12,13 @@ import com.skilldistillery.planets.entities.Planet;
 @Service
 @Transactional
 public class PlanetDaoJpaImpl implements PlanetDAO {
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	public Planet findById(int planetId) {
-		
+
 		return em.find(Planet.class, planetId);
 	}
 
@@ -27,44 +27,42 @@ public class PlanetDaoJpaImpl implements PlanetDAO {
 		String jpql = "SELECT p FROM Planet p ";
 		return em.createQuery(jpql, Planet.class).getResultList();
 	}
-	
+
 	@Override
 	public Planet addNewPlanet(String name, String color) {
-		
+
 		Planet p = new Planet();
 		p.setName(name);
 		p.setColor(color);
 		em.persist(p);
 		return p;
 	}
-	
+
 	@Override
 	public Planet updatePlanet(int planetId, Planet planet) {
-		
+
 		Planet updatePlanet = em.find(Planet.class, planetId);
-		
+
 		updatePlanet.setName(planet.getName());
 		updatePlanet.setColor(planet.getColor());
-		//updatePlanet.setDescription(planet.getDescription());
-		
-		em.persist(planet);
-		em.flush();
+		// updatePlanet.setDescription(planet.getDescription());
+
+		// em.persist(planet);
+		// em.flush();
 		return updatePlanet;
 	}
-	
+
 	@Override
 	public boolean deletePlanet(int planetId) {
 		boolean isDeleted = false;
-		
+
 		Planet planet = em.find(Planet.class, planetId);
-		if(planet != null) {
+		if (planet != null) {
 			em.remove(planet);
 			em.flush();
 			isDeleted = !em.contains(planet);
 		}
 		return isDeleted;
 	}
-
-
 
 }
