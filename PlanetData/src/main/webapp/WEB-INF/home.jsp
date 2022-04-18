@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Planets</title>
-<jsp:include page="bootstraphead.jsp"/>
 </head>
 <body>
 	<main class="container-fluid">

@@ -19,18 +19,18 @@ public class Planet {
 	@Column(name="orbit_distance_kilometers")
 	private long orbitDistanceKilometers;
 	
-	@Column(name="mean_temperature_celsius")
-	private int tempCelsius;
-	
-	@Column(name="equatorial_radius_kilometers")
-	private double radiusKilometers;
-	
-	
-	@Column(name="mass_kilograms")
-	private String mass;
-	
-	@Column(name="gravity_metres_per_second_squared")
-	private double gravity;
+//	@Column(name="mean_temperature_celsius")
+//	private int tempCelsius;
+//	
+//	@Column(name="equatorial_radius_kilometers")
+//	private double radiusKilometers;
+//	
+//	
+//	@Column(name="mass_kilograms")
+//	private String mass;
+//	
+//	@Column(name="gravity_metres_per_second_squared")
+//	private double gravity;
 	
 	public Planet() {
 		super();
@@ -76,44 +76,46 @@ public class Planet {
 		this.orbitDistanceKilometers = orbitDistanceKilometers;
 	}
 
-	public int getTempCelsius() {
-		return tempCelsius;
-	}
-	
-	public void setTempCelsius(int tempCelsius) {
-		this.tempCelsius = tempCelsius;
-	}
-	
-	public double getRadiusKilometers() {
-		return radiusKilometers;
-	}
-	
-	public void setRadiusKilometers(double radiusKilometers) {
-		this.radiusKilometers = radiusKilometers;
-	}
-
-	public String getMass() {
-		return mass;
-	}
-
-	public void setMass(String mass) {
-		this.mass = mass;
-	}
-
-	public double getGravity() {
-		return gravity;
-	}
-
-	public void setGravity(double gravity) {
-		this.gravity = gravity;
-	}
+//	public int getTempCelsius() {
+//		return tempCelsius;
+//	}
+//	
+//	public void setTempCelsius(int tempCelsius) {
+//		this.tempCelsius = tempCelsius;
+//	}
+//	
+//	public double getRadiusKilometers() {
+//		return radiusKilometers;
+//	}
+//	
+//	public void setRadiusKilometers(double radiusKilometers) {
+//		this.radiusKilometers = radiusKilometers;
+//	}
+//
+//	public String getMass() {
+//		return mass;
+//	}
+//
+//	public void setMass(String mass) {
+//		this.mass = mass;
+//	}
+//
+//	public double getGravity() {
+//		return gravity;
+//	}
+//
+//	public void setGravity(double gravity) {
+//		this.gravity = gravity;
+//	}
 
 	
 	@Override
 	public String toString() {
 		return "Planet [id=" + id + ", name=" + name + ", color=" + color + ", description=" + description
-				+ ", orbitDistanceKilometers=" + orbitDistanceKilometers + ", tempCelsius=" + tempCelsius
-				+ ", radiusKilometers=" + radiusKilometers + ", gravity=" + gravity + "]";
+				+ ", orbitDistanceKilometers=" + orbitDistanceKilometers + ""
+						//+ ", tempCelsius=" + tempCelsius
+				//+ ", radiusKilometers=" + radiusKilometers + ", gravity=" + gravity 
+				+ "]";
 	}
 
 }
