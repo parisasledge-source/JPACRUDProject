@@ -51,6 +51,7 @@ class PlanetTest {
 				+ "Along with Venus, Earth, and Mars, Mercury is one of the rocky planets. It has a solid surface that is covered with craters like our Moon. It has a thin atmosphere, and it doesn’t have any moons. Mercury spins slowly compared to Earth, so one day lasts a long time. But a year on Mercury goes fast. Because it’s the closest planet to the sun.", planet.getDescription());
 		assertEquals(57909227, planet.getOrbitDistanceKilometers());
 		assertEquals(167, planet.getTempCelsius());
+		assertEquals(2439.7, planet.getRadiusKilometers());
 		
 	
 	}

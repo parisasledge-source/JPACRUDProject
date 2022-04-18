@@ -21,6 +21,9 @@ public class Planet {
 	
 	@Column(name="mean_temperature_celsius")
 	private int tempCelsius;
+	
+	@Column(name="equatorial_radius_kilometers")
+	private double radiusKilometers;
 
 	public Planet() {
 		super();
@@ -73,7 +76,15 @@ public class Planet {
 	public void setTempCelsius(int tempCelsius) {
 		this.tempCelsius = tempCelsius;
 	}
-
+	
+		public double getRadiusKilometers() {
+		return radiusKilometers;
+	}
+	
+	public void setRadiusKilometers(double radiusKilometers) {
+		this.radiusKilometers = radiusKilometers;
+	}
+	
 	@Override
 	public String toString() {
 		return "Planet [id=" + id + ", name=" + name + "]";
