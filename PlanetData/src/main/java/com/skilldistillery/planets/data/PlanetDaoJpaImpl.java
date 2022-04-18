@@ -19,7 +19,13 @@ public class PlanetDaoJpaImpl implements PlanetDAO {
 	@Override
 	public Planet findById(int planetId) {
 		
-		return em.find(Planet.class, planetId);
+//		if (planetId!=null) {
+			
+			return em.find(Planet.class, planetId);
+//		}else {
+//			return null;
+//		}
+		
 	}
 
 	@Override

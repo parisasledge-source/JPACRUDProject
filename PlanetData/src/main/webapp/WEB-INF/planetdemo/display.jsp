@@ -10,7 +10,7 @@
 </head>
 <body>
 <c:choose>
-<c:when test="${! not empty planet.id }">
+<c:when test="${! not empty planet }">
 
 <a href= "home.do"> Home</a>
 </c:when>
@@ -19,10 +19,11 @@
 
 
 <div class="container-fluid">
-	<h1>    </h1>
-
+	<!-- <h1>Welcome to the Observatory!</h1>
+ -->
 	<div>
-		<h1>${planet.name}</h1><h3>The (${planet.color}) Planet</h3>
+		<h2>${planet.name}</h1>
+		 <h4>The ${planet.color} planet</h4> 
 		<p>${planet.description}</p>
 	</div>
 </div>

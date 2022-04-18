@@ -24,7 +24,7 @@ public class PlanetController {
 //	}
 
 	@RequestMapping(path = { "/", "home.do" })
-	public String index(Model model) {
+	public String home(Model model) {
 		List<Planet> planets = dao.findAll();
 		model.addAttribute("planets", planets);
 		// return "WEB-INF/home.jsp";
