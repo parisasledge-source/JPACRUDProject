@@ -17,14 +17,14 @@ public class PlanetDaoJpaImpl implements PlanetDAO {
 	private EntityManager em;
 
 	@Override
-	public Planet findById(int planetId) {
+	public Planet findById(Integer planetId) {
 		
-//		if (planetId!=null) {
+		if (planetId!=null) {
 			
 			return em.find(Planet.class, planetId);
-//		}else {
-//			return null;
-//		}
+		}else {
+			return null;
+		}
 		
 	}
 
