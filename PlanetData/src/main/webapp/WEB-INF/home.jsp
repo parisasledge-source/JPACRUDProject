@@ -8,6 +8,7 @@
 <title>Planets</title>
 </head>
 <body>
+<%@ include file="bootstraphead.jsp"%> 
 	<main class="container-fluid">
 		<h1>Welcome to Planets Data</h1>
 		${DEBUG}
@@ -25,6 +26,7 @@
 		</form>
 		
 		<form action="updatePlanet.do" method="POST">
+			Planet ID: <input type="text" name="id" /> 
 			Planet Name: <input type="text" name="name" /> 
 			Planet Color: <input type="text" name="color" /> 
 			<input type="submit" value="Update Planet" />

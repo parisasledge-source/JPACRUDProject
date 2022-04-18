@@ -46,8 +46,8 @@ public class PlanetController {
 	}
 
 	@RequestMapping(path = "updatePlanet.do",method = RequestMethod.POST)
-	public String updatePlanet(Planet planet, Model model) {
-		Planet newPlanet = dao.updatePlanet(9, planet);
+	public String updatePlanet(int id, Planet planet, Model model) {
+		Planet newPlanet = dao.updatePlanet(id, planet);
 		model.addAttribute("planet", newPlanet);
 		return "planetdemo/display";
 	}
