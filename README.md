@@ -30,9 +30,10 @@ I learned about mySQLWorkBench and how to create a brand new set of database.
 
 1. MySQL Database for Objects, creating my own database (planets)
 2. Updating the data in the mySQLWorkBench and forward engineering them
-2. Connecting the database to JPACrudProject codes in spring Tool Suit
-2. DAO (Connectivity)
-3. CRUD (in the PS)
-4. HTML/CSS (Bootstrap)
-5. Spring (JSP, XML config, etc.)
-6. Junit test for the entity file (planet) successful
+3. Connecting the database to JPACrudProject codes in spring Tool Suit
+4. DAO (Connectivity)
+5. CRUD (in the PS)
+6. HTML/CSS (Bootstrap)
+7. Spring (JSP, XML config, etc.)
+8. Junit test for the entity file (planet) successful
+9. Bootstraps and Spring boots
